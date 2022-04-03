@@ -23,7 +23,7 @@ GRAPH = {
 WEAPONS = ["PDW", "SMG", "Carbine", "AR", "BR"]
 
 
-def parse_equation(coefficients: list[int | float]) -> str:
+def parse_equation(coefficients: list[float]) -> str:
     equation = f""
 
     for coefficient, variable in zip(coefficients, VARIABLES.values()):
