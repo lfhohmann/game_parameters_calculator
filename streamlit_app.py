@@ -2,7 +2,6 @@ import plotly.graph_objects as go
 import streamlit as st
 import pandas as pd
 import numpy as np
-import random
 
 
 VARIABLES = {
@@ -35,7 +34,7 @@ def parse_equation(coefficients: list[float]) -> str:
     return equation
 
 
-if __name__ == "__main__":
+def main():
     st.set_page_config(
         page_title="Parameters Calculator",
         page_icon="🎮",
@@ -275,5 +274,15 @@ if __name__ == "__main__":
 
     st.sidebar.title("Export Data")
     st.sidebar.download_button(
-        "Download CSV", df.to_csv(index=False), file_name="weapon_accuracy_curves.csv"
+        "Download CSV", df.to_csv(index=False), file_name="weapons_attributes.csv"
     )
+    st.sidebar.download_button(
+        "Download HTML", df.to_html(index=False), file_name="weapons_attributes.html"
+    )
+
+    st.sidebar.title("Author")
+    st.sidebar.markdown("[Lucas Hohmann](https://github.com/lfhohmann)")
+
+
+if __name__ == "__main__":
+    main()
