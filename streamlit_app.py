@@ -47,7 +47,7 @@ def main():
     st.sidebar.title("Parameters")
     data_points = st.sidebar.slider("Data Points", 2, 100, 50)
 
-    st.title("Modifiers")
+    st.title("Accuracy")
 
     # ACCURACY
 
@@ -76,13 +76,13 @@ def main():
         go.Scatter(
             x=x,
             y=y_accuracy,
-            name="Accuracy Modifier",
+            name="Baseline",
             line={"color": "royalblue", "width": 4},
         )
     )
 
     fig.update_layout(
-        title={"text": "Accuracy Modifier", "font": GRAPH["font"]},
+        title={"text": "Baseline", "font": GRAPH["font"]},
         xaxis={"gridcolor": GRAPH["gridcolor"], "range": (0, 1)},
         yaxis={"gridcolor": GRAPH["gridcolor"], "range": (0, 1)},
         showlegend=False,
@@ -144,7 +144,7 @@ def main():
     )
 
     fig.update_layout(
-        title={"text": "Baselines", "font": GRAPH["font"]},
+        title={"text": "Multipliers", "font": GRAPH["font"]},
         xaxis={"gridcolor": GRAPH["gridcolor"], "range": (0, 1)},
         yaxis={"gridcolor": GRAPH["gridcolor"], "range": (0, 1)},
         showlegend=False,
@@ -176,7 +176,7 @@ def main():
     )
 
     fig.update_layout(
-        title={"text": "Multiplied Baselines", "font": GRAPH["font"]},
+        title={"text": "Curves", "font": GRAPH["font"]},
         xaxis={"gridcolor": GRAPH["gridcolor"], "range": (0, 1)},
         yaxis={"gridcolor": GRAPH["gridcolor"], "range": (0, 1)},
         showlegend=False,
@@ -191,7 +191,7 @@ def main():
     # Weapons
 
     st.title("Weapons")
-    st.subheader("Accuracy")
+    st.subheader("Modifiers")
 
     cols = st.columns([1.7, 20, 20, 20, 20, 20, 1.7])
 
