@@ -44,6 +44,11 @@ def main():
 
     df = pd.DataFrame()
 
+    st.sidebar.title("READ ME")
+    st.sidebar.markdown(
+        "This is a simple tool to generate parameters curves for accuracy."
+    )
+
     st.sidebar.title("Parameters")
     data_points = st.sidebar.slider("Data Points", 2, 100, 50)
 
